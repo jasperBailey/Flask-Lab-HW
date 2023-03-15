@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Your Order from Jasper's Legendary Guitar Emporium!</title>
+</head>
+<body>
+    <h2><b>Your Order from Jasper's Legendary Guitar Emporium!</b></h2>
+    <p>Hello <b>{{ order.customer_name }}</b> your order of <b>{{ order.quantity }} {{ order.guitar_name }}{% if order.quantity > 1 %}s
+    {% endif %}</b> was placed at {{ order.order_date}} and will be with you shortly.
+    </p>
+    <p>Thanks for your custom! Have a wonderful day!</p>
+    <img src="/images/{{ order.img }}">
+        
+</body>
+</html>

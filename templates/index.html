@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jasper's Legendary Guitar Emporium</title>
+</head>
+<body>
+    <div id="title">
+        <h1><b>Jasper's Legendary Guitar Emporium</b></h1>
+        <h3>Current Orders</h3>
+    </div>
+    
+    
+    <section id="order-list">
+        {% for order in order_list%}
+        <div class="individual-order">
+            <img src="/images/{{ order.img }}">
+            <p><a href="/orders/{{ order_list.index(order) }}">{{ order.customer_name }}, {{ order.order_date }}, {{ order.quantity }}, {{ order.guitar_name }}</a></p>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

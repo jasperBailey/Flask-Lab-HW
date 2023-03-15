@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(0deg, #ddbdcd 70%, #e6a67b);
+    height: 100%;
+}
+
+#order-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.individual-order {
+    width: 40vw;
+}
+
+.individual-order > img {
+    width: 40vw;
+    height: 40vw;
+}
+
+body > img {
+    height: 78vh;
+    width: 78vh;
+}
+
+h1 {
+    font-family: "Comic Sans MS";
+    color: rgb(255, 36, 145);
+}
+
+#title {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
